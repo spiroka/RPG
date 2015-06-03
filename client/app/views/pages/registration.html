@@ -1,0 +1,23 @@
+<div class="col s6 offset-s3">
+	<form ng-submit="signup.doSignup()" class="card">
+		<div class="card-content">
+			<span class="card-title grey-text text-darken-4">Sign up</span>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="name">Name</label>
+					<input id="name" type="text" ng-model="signup.name" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="password">Password</label>
+					<input id="password" type="password" ng-model="signup.password" />
+				</div>
+			</div>
+		</div>
+		<div class="card-action">
+			<button class="btn waves-effect waves-light" type="submit">Sign up</button>	
+			<a href="/login">Log in</a>
+		</div>
+	</form>
+</div>

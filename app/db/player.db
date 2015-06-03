@@ -1,0 +1,4 @@
+{"name":"asd","maxhp":10,"hp":10,"password":"$2a$10$x4pRqhfW.yMHGUUswV8w.eLt6dXo3XNEau.CfMM/NlPU94T9G4gXC","_id":"6YpHGcBWGeKb8OOb"}
+{"name":"asdasd","maxhp":10,"hp":10,"password":"$2a$10$suMKHbIWOMFaadDjtPxc0OE5JXwr5DBcHhzE/wWqBGEuEtA1X3ZD.","_id":"Ul00Q400s0gX9bZG"}
+{"name":"admin","maxhp":"20","hp":"9","password":"$2a$10$.Brt2xsx2SBvfJ6g7P53lOl.EgOg8w6wYBMklAtXSlTwgDmpA8cdm","_id":"yqdGMPlMtli0u7Lk"}
+{"$$indexCreated":{"fieldName":"name","unique":true,"sparse":false}}

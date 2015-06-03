@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RPG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<base href="/">
+		
+	<link rel="stylesheet" href="assets/css/materialize.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+		
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		
+	<script src="assets/js/materialize.min.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+
+	<script src="app/controllers/mainCtrl.js"></script>
+
+	<script src="app/services/authService.js"></script>
+	<script src="app/services/gameService.js"></script>
+		
+	<script src="app/directives/directives.js"></script>
+
+	<script src="app/app.routes.js"></script>
+	<script src="app/app.js"></script>
+</head>
+<body ng-app="RPG" ng-controller="mainController as main">
+	
+	<nav>
+		<div class="nav-wrapper container">
+			<a href="#" class="brand-logo">RPG</a>
+			<ul class="right">
+				<li><a href="#" ng-click="main.doLogout()" ng-if="main.loggedIn">Log out</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container main">
+		<div ng-view class="row"></div>
+	</div>
+
+</body>
+</html>

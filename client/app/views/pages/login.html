@@ -1,0 +1,23 @@
+<div class="col s12 m6 offset-m3">
+	<form ng-submit="login.doLogin()" class="card">
+		<div class="card-content">
+			<span class="card-title grey-text text-darken-4">Log in</span>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="name">Name</label>
+					<input id="name" type="text" ng-model="login.name" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="password">Password</label>
+					<input id="password" type="password" ng-model="login.password" />
+				</div>
+			</div>
+		</div>
+		<div class="card-action">
+			<button class="btn waves-effect waves-light" type="submit">Log in</button>			
+			<a href="/registration">Sign up</a>
+		</div>
+	</form>
+</div>

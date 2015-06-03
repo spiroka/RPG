@@ -1,0 +1,14 @@
+{
+  "name": "rpg",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.9.3",
+    "express": "~4.10.3",
+    "jsonwebtoken": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.1"
+  }
+}

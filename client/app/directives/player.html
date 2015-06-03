@@ -1,0 +1,15 @@
+<div class="card">
+	<div class="card-content">
+		<h5>Name: {{ player.name }}</h5>
+		HP: {{ player.hp }} / {{ player.maxhp }}<br>
+		<ul class="collection with-header">
+			<li class="collection-header"><b>Items:</b></li>
+			<li ng-repeat="item in player.items" class="collection-item">
+				{{ item.name }}
+			</li>
+		</ul>
+	</div>
+	<div class="card-action" ng-if="!game.fighting">
+		<button class="btn waves-effect waves-light" ng-click="game.findEnemy()">Find enemy</button>
+	</div>
+</div>
