@@ -1,9 +1,17 @@
-var gulp = require('gulp'); 
+var gulp =    require('gulp'); 
+var sass =    require('gulp-sass');
+var nodemon = require('gulp-nodemon');
 
-var sass = require('gulp-sass');
-
-gulp.task('default', function() {
+gulp.task('css', function() {
     return gulp.src('client/assets/sass/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('client/assets/css'));
 });
+
+gulp.task('launch', function() {
+    return nodemon({
+        script: 'server.js'
+    });
+});
+
+gulp.task('default', ['css', 'launch']);

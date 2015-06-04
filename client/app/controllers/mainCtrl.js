@@ -7,9 +7,10 @@ angular.module('mainCtrl', [])
 	vm.loggedIn = Auth.isLoggedIn();
 	vm.fighting = false;
 
-	$rootScope.$on('$routeChangeStart', function() {
+	$rootScope.$on('$routeChangeStart', function(event, next, current) {
 		vm.loggedIn = Auth.isLoggedIn();	
 
+		if(!vm.loggedIn && next.loginRequired) $location.path('/login');
 		Auth.getPlayer()
 			.then(function(data) {
 				$scope.player = data.data;

@@ -5,6 +5,7 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.9.3",
     "express": "~4.10.3",
+    "gulp-nodemon": "^2.0.3",
     "jsonwebtoken": "^1.2.0"
   },
   "devDependencies": {

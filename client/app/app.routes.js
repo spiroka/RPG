@@ -7,7 +7,8 @@ angular.module('app.routes', ['ngRoute'])
 		.when('/', {
 			templateUrl:  'app/views/pages/home.html',
 			controller:   'mainController',
-			controllerAs: 'game'
+			controllerAs: 'game',
+			loginRequired: true
 		})
 		
 		.when('/login', {
