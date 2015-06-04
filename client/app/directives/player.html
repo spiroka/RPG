@@ -1,7 +1,8 @@
 <div class="card">
 	<div class="card-content">
 		<h5>Name: {{ player.name }}</h5>
-		HP: {{ player.hp }} / {{ player.maxhp }}<br>
+		<h6>HP:</h6>
+		<hp-bar id="playerhp" hp="{{ player.hp }}" maxhp="{{ player.maxhp }}"></hp-bar>
 		<ul class="collection with-header">
 			<li class="collection-header"><b>Items:</b></li>
 			<li ng-repeat="item in player.items" class="collection-item">

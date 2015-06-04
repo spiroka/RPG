@@ -1,7 +1,8 @@
 <div ng-if="game.fighting" class="card">
 	<div class="card-content">
 		<h6>Name: {{ enemy.name }}</h6>
-		HP: {{ enemy.hp }} / {{ enemy.maxhp }}<br>
+		<h6>HP:</h6>
+		<hp-bar id="enemyhp" hp="{{ enemy.hp }}" maxhp="{{ enemy.maxhp }}"></hp-bar>
 	</div>
 	<div class="card-action">
 		<button class="btn waves-effect waves-light" ng-click="game.fightEnemy()">Attack</button>
