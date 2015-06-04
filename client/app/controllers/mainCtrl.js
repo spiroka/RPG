@@ -11,9 +11,11 @@ angular.module('mainCtrl', [])
 		vm.loggedIn = Auth.isLoggedIn();	
 
 		if(!vm.loggedIn && next.loginRequired) $location.path('/login');
+
 		Auth.getPlayer()
 			.then(function(data) {
 				$scope.player = data.data;
+				$scope.player.dead = $scope.player.hp <= 0 ? true : false;
 				Game.getPlayeritems($scope.player._id)
 					.then(function(data) {
 						$scope.player.items = data.data;
@@ -51,10 +53,23 @@ angular.module('mainCtrl', [])
 			});
 	};
 	
-	vm.fightEnemy = function () {
-		$scope.enemy = {};
+	vm.hitEnemy = function () {
+		$scope.player.damage = 2;
+		$scope.enemy.hp -= $scope.player.damage;
+		$scope.player.hp -= $scope.enemy.damage;
 		
-		vm.fighting = false;
+		if($scope.player.hp <= 0 || $scope.enemy.hp <= 0){
+			$scope.enemy = {};
+			if($scope.player.hp <= 0) $scope.player.dead = true;
+			Game.updatePlayer($scope.player._id, { 'hp': $scope.player.hp.toString() });
+			vm.fighting = false;
+		}
+	};
+	
+	vm.revive = function () {
+		$scope.player.hp = $scope.player.maxhp;
+		Game.updatePlayer($scope.player._id, { 'hp': $scope.player.maxhp });
+		$scope.player.dead = false;
 	};
 
 }]);

@@ -1,7 +1,7 @@
 <div class="card">
 	<div class="card-content">
 		<h5>Name: {{ player.name }}</h5>
-		<h6>HP:</h6>
+		<h6>HP</h6>
 		<hp-bar id="playerhp" hp="{{ player.hp }}" maxhp="{{ player.maxhp }}"></hp-bar>
 		<ul class="collection with-header">
 			<li class="collection-header"><b>Items:</b></li>
@@ -11,6 +11,7 @@
 		</ul>
 	</div>
 	<div class="card-action" ng-if="!game.fighting">
-		<button class="btn waves-effect waves-light" ng-click="game.findEnemy()">Find enemy</button>
+		<button ng-if="!player.dead" class="btn waves-effect waves-light" ng-click="game.findEnemy()">Find enemy</button>
+		<button ng-if="player.dead" class="btn waves-effect waves-light" ng-click="game.revive()">Revive</button>
 	</div>
 </div>

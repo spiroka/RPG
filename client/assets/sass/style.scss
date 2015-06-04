@@ -1,3 +1,23 @@
 .main {
+	position: relative;
 	margin-top: 50px;
+}
+
+@mixin animation($name, $duration) {
+	-webkit-animation: $name $duration both ease-in;
+	-moz-animation: $name $duration both ease-in;
+	animation: $name $duration both ease-in;
+}
+
+.animated.ng-enter, .animated.ng-leave {
+	width: 100%;
+	position: absolute;
+}
+
+.animated.ng-enter {
+	@include animation(fadeInRight, 0.5s);
+}
+
+.animated.ng-leave {
+	@include animation(fadeOutRight, 0.5s);
 }

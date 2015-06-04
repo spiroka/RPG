@@ -1,2 +1,17 @@
 .main {
+  position: relative;
   margin-top: 50px; }
+
+.animated.ng-enter, .animated.ng-leave {
+  width: 100%;
+  position: absolute; }
+
+.animated.ng-enter {
+  -webkit-animation: fadeInRight 0.5s both ease-in;
+  -moz-animation: fadeInRight 0.5s both ease-in;
+  animation: fadeInRight 0.5s both ease-in; }
+
+.animated.ng-leave {
+  -webkit-animation: fadeOutRight 0.5s both ease-in;
+  -moz-animation: fadeOutRight 0.5s both ease-in;
+  animation: fadeOutRight 0.5s both ease-in; }
