@@ -1,5 +1,17 @@
 {"name":"sword","type":"weapon","owner":"6YpHGcBWGeKb8OOb","damage":0,"_id":"DT5GIHMvyHqTwojY"}
 {"name":"Dagger","type":"weapon","damage":1,"owner":"admin","_id":"H5xLcLDja9socXGw"}
 {"name":"Dagger","type":"weapon","damage":1,"owner":"6YpHGcBWGeKb8OOb","_id":"IwPMBWWJe0orqyJO"}
+{"name":"Spear","type":"weapon","damage":"5","_id":"Qq0Yg9HEQ26vV4FV"}
 {"name":"Poti","type":"potion","healing":0,"_id":"RE6ty0PTSWy8FKzQ"}
-{"name":"Dagger","type":"weapon","damage":1,"owner":"Ul00Q400s0gX9bZG","_id":"nRd1Aa26zuuAYHs2"}
+{"name":"Axe","type":"weapon","owner":"6YpHGcBWGeKb8OOb","damage":"1","_id":"gwiGXfbYnBnaqyCJ"}
+{"name":"tttt","type":"potion","healing":5,"_id":"boqRA1yAaHyLYSgN"}
+{"$$deleted":true,"_id":"DT5GIHMvyHqTwojY"}
+{"$$deleted":true,"_id":"H5xLcLDja9socXGw"}
+{"$$deleted":true,"_id":"IwPMBWWJe0orqyJO"}
+{"$$deleted":true,"_id":"Qq0Yg9HEQ26vV4FV"}
+{"$$deleted":true,"_id":"RE6ty0PTSWy8FKzQ"}
+{"$$deleted":true,"_id":"boqRA1yAaHyLYSgN"}
+{"$$deleted":true,"_id":"gwiGXfbYnBnaqyCJ"}
+{"name":"Dagger","type":"weapon","damage":1,"owner":"1DT66cgYjxAqvyvc","_id":"wXz0500v12Zw6UkY"}
+{"name":"Bow and arrows","type":"weapon","damage":2,"owner":"1DT66cgYjxAqvyvc","_id":"BTTdI0RLpm004w8H"}
+{"name":"Bow and arrows","type":"weapon","damage":2,"_id":"BTTdI0RLpm004w8H","owner":"1DT66cgYjxAqvyvc"}

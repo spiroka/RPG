@@ -26,6 +26,9 @@ app.use('/item', itemRoutes);
 var creatureRoutes = require('./app/routes/creature')(app, express);
 app.use('/creature', creatureRoutes);
 
+var adminRoutes = require('./app/routes/admin')(app, express);
+app.use('/admin', adminRoutes);
+
 app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname + '/client/app/views/index.html'));
 });

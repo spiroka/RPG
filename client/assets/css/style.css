@@ -15,3 +15,16 @@
   -webkit-animation: fadeOutRight 0.5s both ease-in;
   -moz-animation: fadeOutRight 0.5s both ease-in;
   animation: fadeOutRight 0.5s both ease-in; }
+
+.delete {
+  color: red;
+  cursor: pointer; }
+
+.collection-header {
+  font-size: 1.1em; }
+  .collection-header i {
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    vertical-align: middle;
+    float: right; }

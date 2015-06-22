@@ -32,7 +32,6 @@ angular.module('mainCtrl', [])
 
 	vm.doLogout = function () {
 		Auth.logout();
-		$scope.player = '';
 		
 		$location.path('/login');
 	};
@@ -54,7 +53,7 @@ angular.module('mainCtrl', [])
 	};
 	
 	vm.hitEnemy = function () {
-		$scope.player.damage = 2;
+		$scope.player.damage = $scope.player.weapon ? $scope.player.weapon.damage : 1;
 		$scope.enemy.hp -= $scope.player.damage;
 		$scope.player.hp -= $scope.enemy.damage;
 		
@@ -68,8 +67,25 @@ angular.module('mainCtrl', [])
 	
 	vm.revive = function () {
 		$scope.player.hp = $scope.player.maxhp;
-		Game.updatePlayer($scope.player._id, { 'hp': $scope.player.maxhp });
+		Game.updatePlayer($scope.player._id, { 'hp': $scope.player.maxhp.toString() });
 		$scope.player.dead = false;
 	};
 
-}]);
+}])
+
+.filter('item', function () {
+	return function (input, weapon) {
+		input = input || '';
+		var out = [];
+		
+		for (var i = 0; i < input.length; i++) {
+	        if(input[i].type == "weapon" && weapon){
+	            out.push(input[i]);
+	        } else if(input[i].type == "potion" && !weapon) {
+				out.push(input[i]);
+			}
+	    }
+		
+		return out;
+	};
+});

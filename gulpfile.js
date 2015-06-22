@@ -8,10 +8,14 @@ gulp.task('css', function() {
         .pipe(gulp.dest('client/assets/css'));
 });
 
+gulp.task('watch', function() {
+    return gulp.watch('client/assets/sass/*.scss', ['css']);
+});
+
 gulp.task('launch', function() {
     return nodemon({
         script: 'server.js'
     });
 });
 
-gulp.task('default', ['css', 'launch']);
+gulp.task('default', ['css', 'watch', 'launch']);

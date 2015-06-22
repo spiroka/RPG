@@ -1,0 +1,29 @@
+<div class="col s12">
+	<ul class="collection with-header">
+		<li class="collection-header">Players</li>
+		<li ng-repeat="player in players" class="collection-item">
+			<b>{{player.name}}</b>
+			<span class="right"><i ng-click="admin.deletePlayer(player._id)" class="mdi-content-clear delete"></i></span>
+		</li>
+	</ul>
+</div>
+
+<div class="col s12">
+	<ul class="collection with-header">
+		<li class="collection-header">Items<a href="/admin/additem"><i class="mdi-content-add"></i></a></li>
+		<li ng-repeat="item in items" class="collection-item">
+			<b>{{item.name}}</b>
+			<span class="right"><i ng-click="admin.deleteItem(item._id)" class="mdi-content-clear delete"></i></span>
+		</li>
+	</ul>
+</div>
+
+<div class="col s12">
+	<ul class="collection with-header">
+		<li class="collection-header">Creatures<a href="/admin/addcreature"><i class="mdi-content-add"></i></a></li>
+		<li ng-repeat="creature in creatures" class="collection-item">
+			<b>{{creature.name}}</b>
+			<span class="right"><i ng-click="admin.deleteCreature(creature._id)" class="mdi-content-clear delete"></i></span>
+		</li>
+	</ul>
+</div>

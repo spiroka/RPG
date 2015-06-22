@@ -14,6 +14,17 @@ angular.module('authService', [])
 	       			return data;
 				});
 		};
+		
+		authFactory.adminlogin = function(name, password) {	
+			return $http.post('/admin/authenticate', {
+				name:     name,
+				password: password
+			})
+				.success(function(data) {
+					AuthToken.setToken(data.token);
+	       			return data;
+				});
+		};
 	
 		authFactory.logout = function() {
 			AuthToken.setToken();

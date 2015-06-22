@@ -3,12 +3,13 @@ var config      = require('../../config');
 var verifytoken = require('./verification').verifytoken;
 
 var secret = config.secret;
+var adminsecret = config.adminsecret;
 
 module.exports = function (app, express) {
 
 	var creatureRouter = express.Router();
 	
-	creatureRouter.use(verifytoken);
+	creatureRouter.use(verifytoken(secret, adminsecret));
 	
 	creatureRouter.route('/')
 	

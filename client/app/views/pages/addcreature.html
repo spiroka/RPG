@@ -1,0 +1,29 @@
+<div class="col s12 m6 offset-m3">
+	<form ng-submit="admin.addCreature()" class="card">
+		<div class="card-content">
+			<span class="card-title grey-text text-darken-4">Add new creature</span>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="name">Name</label>
+					<input id="name" type="text" ng-model="admin.creature.name" ng-required="true"/>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="damage">Damage</label>
+					<input id="damage" type="text" ng-model="admin.creature.damage"/>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<label for="maxhp">Max HP</label>
+					<input id="maxhp" type="text" ng-model="admin.creature.maxhp"/>
+				</div>			
+			</div>
+		</div>
+		<div class="card-action">
+			<button class="btn waves-effect waves-light" type="submit">Add</button>
+			<a href="/admin">Back</a>
+		</div>
+	</form>
+</div>

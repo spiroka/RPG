@@ -5,6 +5,7 @@ var bcrypt 	    = require('bcrypt-nodejs');
 var verifytoken = require('./verification').verifytoken;
 
 var secret = config.secret;
+var adminsecret = config.adminsecret;
 
 module.exports = function (app, express) {
 
@@ -103,7 +104,7 @@ module.exports = function (app, express) {
 		}
 	});
 	
-	playerRouter.use(verifytoken);
+	playerRouter.use(verifytoken(secret, adminsecret));
 	
 	playerRouter.get('/me', function(req, res) {
 		res.json(req.decoded);

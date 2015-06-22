@@ -3,12 +3,15 @@
 		<h5>Name: {{ player.name }}</h5>
 		<h6>HP</h6>
 		<hp-bar id="playerhp" hp="{{ player.hp }}" maxhp="{{ player.maxhp }}"></hp-bar>
-		<ul class="collection with-header">
-			<li class="collection-header"><b>Items:</b></li>
-			<li ng-repeat="item in player.items" class="collection-item">
-				{{ item.name }}
-			</li>
-		</ul>
+		<form action="#">
+			<ul class="collection with-header">
+				<li class="collection-header"><b>Choose a weapon:</b></li>
+				<li ng-repeat="weapon in player.items | item:true" class="collection-item">
+					<input name="weapon" type="radio" id="weapon{{ $index }}" ng-model="player.weapon" ng-value="{{ weapon }}"/>
+					<label for="weapon{{ $index }}"><b>{{ weapon.name }}</b> Damage: {{weapon.damage}}</label>
+				</li>
+			</ul>
+		</form>
 	</div>
 	<div class="card-action" ng-if="!game.fighting">
 		<button ng-if="!player.dead" class="btn waves-effect waves-light" ng-click="game.findEnemy()">Find enemy</button>

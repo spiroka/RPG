@@ -1,2 +1,11 @@
+{"name":"Troll","damage":"1","maxhp":"20","hp":"20","_id":"2mmkMFOZJUTvDjso"}
 {"name":"goblin","damage":1,"maxhp":"5","hp":"5","_id":"9TekMm261hEkRgzD"}
 {"name":"orc","damage":1,"maxhp":5,"hp":5,"_id":"P9m0c2cZt93OVauI"}
+{"name":"Dragon","damage":5,"maxhp":5,"hp":5,"_id":"hsNpB4XXekKKQQvg"}
+{"$$deleted":true,"_id":"2mmkMFOZJUTvDjso"}
+{"$$deleted":true,"_id":"9TekMm261hEkRgzD"}
+{"$$deleted":true,"_id":"P9m0c2cZt93OVauI"}
+{"$$deleted":true,"_id":"hsNpB4XXekKKQQvg"}
+{"name":"Orc","damage":1,"maxhp":3,"hp":3,"_id":"YnwB2SNgnpFFg69o"}
+{"name":"Goblin","damage":1,"maxhp":2,"hp":2,"_id":"qvUH1qElPX3UkKlA"}
+{"name":"Troll","damage":2,"maxhp":4,"hp":4,"_id":"jlMenVobklA4jDtK"}
